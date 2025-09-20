@@ -1,1 +1,15 @@
-
+body {
+    font-family: 'Inter', sans-serif;
+    color: #e3a575;
+    background-color: #3a5127;
+}
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+.hero-bg-container {
+    background-image: url('WilliamMorrisCropped.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

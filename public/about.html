@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flourish Design Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts Material Symbols Outlined -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdL5i5F1jM1+tq9p1J8m4mG+78uY2c9G2bW9Ww1u8t+4l9k/xP7+9m2W+c6w8f+uB4f/wBw7C5f/uB2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#3a5127',
+                        'secondary': '#b3c39e',
+                        'accent': '#e3a575',
+                        'dark-accent': '#ba6a31',
+                        'light-bg': '#f3f0e9',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/flourish.ico">
+</head>
+<body class="antialiased bg-primary">
 
+    <!-- Header Bar -->
+    <header class="bg-light-bg py-4 px-8 fixed top-0 left-0 right-0 z-50 shadow-md">
+        <nav class="relative max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/flourish design co ba6a31 flower.png" alt="Flourish Design Co. Logo" class="h-10">
+            </div>
+
+            <!-- Mobile menu button (visible on small screens) -->
+            <button id="menu-toggle" aria-controls="main-menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-dark-accent hover:bg-gray-100 focus:outline-none" title="Toggle menu">
+                <!-- Hamburger icon -->
+                <svg id="icon-open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <!-- Close icon (hidden by default) -->
+                <svg id="icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <ul id="main-menu" class="hidden md:flex md:space-x-8 text-dark-accent font-semibold absolute right-6 top-full mt-2 bg-light-bg p-4 rounded-md shadow-md flex-col space-y-2 w-44 md:static md:flex-row md:space-y-0 md:space-x-8 z-50">
+                <li><a href="index.html" class="hover:underline block px-3 py-2 rounded text-dark-accent md:inline md:p-0">Home</a></li>
+                <!-- <li><a href="#services" class="hover:underline block px-3 py-2 rounded text-dark-accent md:inline md:p-0">Interior Design</a></li>
+                <li><a href="#services" class="hover:underline block px-3 py-2 rounded text-dark-accent md:inline md:p-0">Special Events</a></li>
+                <li><a href="#services" class="hover:underline block px-3 py-2 rounded text-dark-accent md:inline md:p-0">Home Decor</a></li> -->
+                <li><a href="#" class="hover:underline block px-3 py-2 rounded text-dark-accent md:inline md:p-0">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-bg-container relative min-h-screen flex items-center justify-center p-8 text-center pt-20">
+        <div class="bg-light-bg rounded-lg shadow-xl p-10 max-w-2xl mx-auto flex flex-col items-center">
+            <img src="assets/flourish design co flower.png" alt="Flourish Design Co. Logo" class="mx-auto md:mx-0 mb-4 rounded-lg">
+            <h1 class="text-6xl md:text-8xl font-bold leading-tight mb-4 text-dark-accent">Ideas Bloom Here</h1>
+            <p class="text-lg md:text-xl mb-8 font-light italic text-dark-accent">Grow your style. Cultivate your space.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="public/about.html" class="bg-primary text-light-bg font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">Learn More</a>
+                <!-- <a href="#" class="bg-transparent border-2 border-primary text-primary font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">View Portfolio</a> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <!-- <section id="services" class="py-16 md:py-24 px-8 text-center bg-primary"> -->
+        <!-- <h2 class="text-4xl md:text-5xl font-bold mb-4 text-accent">Our Offerings</h2> -->
+        <!-- <p class="text-xl md:text-2xl font-light mb-12 italic text-accent">From the foundations of your home to the flourishes of your events, we bring beauty to every detail.</p> -->
+        <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"> -->
+            <!-- Interior Design Card -->
+            <!-- <div class="relative rounded-2xl shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl overflow-hidden p-4"> -->
+                <!-- <div class="absolute inset-0 z-0" style="background-image: url('/assets/WilliamMorrisCropped.png'); background-size: cover; background-position: top center; background-repeat: no-repeat;"></div> -->
+                <!-- <div class="relative z-10 p-8 bg-secondary bg-opacity-80 rounded-2xl"> -->
+                    <!-- <span class="material-symbols-outlined text-5xl mb-4 text-dark-accent">chair</span> -->
+                    <!-- <h3 class="text-3xl font-bold mb-2 text-primary">Interior Design</h3> -->
+                    <!-- <p class="font-light mb-6 text-primary">Crafting beautiful, functional homes and commercial spaces that tell your unique story.</p> -->
+                    <!-- <a href="#" class="inline-block bg-primary text-light-bg font-semibold py-2 px-6 rounded-full transition-colors hover:bg-opacity-80">Learn More</a> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- Special Events Card -->
+            <!-- <div class="relative rounded-2xl shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl overflow-hidden p-4"> -->
+                <!-- <div class="absolute inset-0 z-0" style="background-image: url('/assets/WilliamMorrisCropped.png'); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div> -->
+                <!-- <div class="relative z-10 p-8 bg-secondary bg-opacity-80 rounded-2xl"> -->
+                    <!-- <span class="material-symbols-outlined text-5xl mb-4 text-dark-accent">church</span> -->
+                    <!-- <h3 class="text-3xl font-bold mb-2 text-primary">Special Events</h3> -->
+                    <!-- <p class="font-light mb-6 text-primary">Designing unforgettable occasions, from intimate gatherings to grand celebrations.</p> -->
+                    <!-- <a href="#" class="inline-block bg-primary text-light-bg font-semibold py-2 px-6 rounded-full transition-colors hover:bg-opacity-80">Learn More</a> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- Home Decor Card -->
+            <!-- <div class="relative rounded-2xl shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl overflow-hidden p-4"> -->
+                <!-- <div class="absolute inset-0 z-0" style="background-image: url('/assets/WilliamMorrisCropped.png'); background-size: cover; background-position: bottom center; background-repeat: no-repeat;"></div> -->
+                <!-- <div class="relative z-10 p-8 bg-secondary bg-opacity-80 rounded-2xl"> -->
+                    <!-- <span class="material-symbols-outlined text-5xl mb-4 text-dark-accent">floor_lamp</span> -->
+                    <!-- <h3 class="text-3xl font-bold mb-2 text-primary">Home Decor</h3> -->
+                    <!-- <p class="font-light mb-6 text-primary">Curating unique, hand-picked pieces to add charm and character to any room.</p> -->
+                    <!-- <a href="#" class="inline-block bg-primary text-light-bg font-semibold py-2 px-6 rounded-full transition-colors hover:bg-opacity-80">Shop Now</a> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </section> -->
+
+    <!-- About Us Section -->
+    <section class="py-16 md:py-24 px-8 bg-secondary">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+            <div class="order-2 md:order-1">
+                <!-- <img src="assets/library.png" alt="A beautiful interior design shot" class="rounded-2xl shadow-2xl w-full h-auto"> -->
+            </div>
+            <div class="text-center md:text-left order-1 md:order-2">
+                <!-- <h2 class="text-4xl md:text-5xl font-bold mb-4 text-primary">The Flourish Philosophy</h2> -->
+                <p class="text-xl leading-relaxed text-primary font-light">
+                    Your home should reflect who you are. At Flourish Design Co., we partner with you to uncover and refine your sense of style. Our collaborative approach transforms your vision into reality, blending timeless elegance with personal touches to create spaces that are uniquely yours. Ready to start your journey? 
+                </br>
+                <a href="public/about.html" class="text-dark-accent underline font-semibold">Learn more about us.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section class="py-16 md:py-24 px-8 text-center bg-primary">
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-accent">What Our Clients Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"> -->
+            <!-- Testimonial 1 -->
+            <!-- <div class="bg-secondary rounded-2xl shadow-xl p-8 italic font-light relative overflow-hidden">
+                <p class="mb-4 text-primary">"Flourish Design Co. transformed our home into an oasis! They truly understood our vision and brought it to life with such elegance."</p>
+                <p class="font-semibold text-dark-accent">- Jane Doe</p> -->
+            <!-- </div> -->
+            <!-- Testimonial 2 -->
+            <!-- <div class="bg-secondary rounded-2xl shadow-xl p-8 italic font-light relative overflow-hidden">
+                <p class="mb-4 text-primary">"The event planning was flawless and absolutely beautiful. The attention to detail was incredible, making our special day perfect."</p>
+                <p class="font-semibold text-dark-accent">- John Smith</p>
+            </div> -->
+            <!-- Testimonial 3 -->
+            <!-- <div class="bg-secondary rounded-2xl shadow-xl p-8 italic font-light relative overflow-hidden">
+                <p class="mb-4 text-primary">"We found the most unique and beautiful pieces for our living room. It's amazing how a few items can completely change a space."</p>
+                <p class="font-semibold text-dark-accent">- Sarah Lee</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="bg-light-bg py-16 px-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            <!-- Footer Left -->
+            <div>
+                <img src="assets/flourish design co flower.png" alt="Flourish Design Co. Logo" class="mx-auto md:mx-0 mb-4 rounded-lg">
+                <p class="text-sm text-dark-accent font-light">Email: flourishdesigncollc@gmail.com</p>
+                <p class="text-sm text-dark-accent font-light">Phone: (970) 305-6548</p>
+                <p class="text-sm text-dark-accent font-light">Fuquay-Varina, NC</p>
+                <div class="flex justify-center md:justify-start space-x-4 mt-4 text-2xl text-dark-accent">
+                    <a href="https://www.instagram.com/flourishdesignco.llc/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <!-- <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
+                    <a href="https://www.pinterest.com/flourishdesignco" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://www.youtube.com/@FlourishDesignCoLLC" aria-label="YouTube"><i class= "fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <!-- Footer Middle -->
+            <div>
+                <!-- <h3 class="text-2xl font-bold mb-4 text-dark-accent">Quick Links</h3> -->
+                <ul class="space-y-2 text-dark-accent">
+                    <!-- <li><a href="public/about.html" class="hover:underline font-light">About Us</a></li> -->
+                    <!-- <li><a href="#" class="hover:underline font-light">Portfolio</a></li> -->
+                    <!-- <li><a href="#" class="hover:underline font-light">Contact</a></li> -->
+                    <!-- <li><a href="#" class="hover:underline font-light">Blog</a></li> -->
+                </ul>
+            </div>
+            <!-- Footer Right -->
+            <!-- <div> -->
+                <!-- <h3 class="text-2xl font-bold mb-4 text-dark-accent">Newsletter</h3>
+                <p class="text-sm mb-4 text-dark-accent font-light">Get design tips and inspiration delivered to your inbox.</p> -->
+                <!-- <form class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+                    <input type="email" placeholder="Enter your email" class="flex-grow p-3 rounded-full border border-dark-accent focus:outline-none focus:ring-2 focus:ring-dark-accent">
+                    <button type="submit" class="bg-primary text-light-bg font-semibold py-3 px-6 rounded-full transition-colors hover:bg-opacity-80">Sign Up</button>
+                </form> -->
+            <!-- </div> -->
+        </div>
+    </footer>
+
+    <!-- Placeholder JavaScript for a simple scroll animation -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function() {
+            const btn = document.getElementById('menu-toggle');
+            const menu = document.getElementById('main-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
+
+            if (!btn || !menu) return;
+
+            btn.addEventListener('click', () => {
+                const isOpen = menu.classList.toggle('hidden') === false; // true when shown
+                // Update icons
+                if (iconOpen && iconClose) {
+                    iconOpen.classList.toggle('hidden', isOpen);
+                    iconClose.classList.toggle('hidden', !isOpen);
+                }
+                // Update ARIA
+                btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -31,16 +31,29 @@
 
     <!-- Header Bar -->
     <header class="bg-light-bg py-4 px-8 fixed top-0 left-0 right-0 z-50 shadow-md">
-        <nav class="max-w-6xl mx-auto flex justify-between items-center">
+        <nav class="relative max-w-6xl mx-auto flex justify-between items-center">
             <div class="flex items-center">
                 <img src="assets/flourish design co ba6a31 flower.png" alt="Flourish Design Co. Logo" class="h-10">
             </div>
-            <ul class="hidden md:flex space-x-8 text-dark-accent font-semibold">
-                <li><a href="index.html" class="hover:underline">Home</a></li>
-                <!-- <li><a href="#services" class="hover:underline">Interior Design</a></li>
-                <li><a href="#services" class="hover:underline">Special Events</a></li>
-                <li><a href="#services" class="hover:underline">Home Decor</a></li> -->
-                <li><a href="#" class="hover:underline">Contact</a></li>
+
+            <!-- Mobile menu button (visible on small screens) -->
+            <button id="menu-toggle" aria-controls="main-menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-dark-accent hover:bg-gray-100 focus:outline-none" title="Toggle menu">
+                <!-- Hamburger icon -->
+                <svg id="icon-open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <!-- Close icon (hidden by default) -->
+                <svg id="icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <ul id="main-menu" class="hidden md:flex md:space-x-8 text-dark-accent font-semibold absolute right-6 top-full mt-2 bg-light-bg p-4 rounded-md shadow-md flex-col space-y-2 w-44 md:static md:flex-row md:space-y-0 md:space-x-8 z-50">
+                <li><a href="index.html" class="hover:underline block px-3 py-2 rounded text-dark-accent md:inline md:p-0">Home</a></li>
+                <!-- <li><a href="#services" class="hover:underline block px-3 py-2 rounded text-dark-accent md:inline md:p-0">Interior Design</a></li>
+                <li><a href="#services" class="hover:underline block px-3 py-2 rounded text-dark-accent md:inline md:p-0">Special Events</a></li>
+                <li><a href="#services" class="hover:underline block px-3 py-2 rounded text-dark-accent md:inline md:p-0">Home Decor</a></li> -->
+                <li><a href="#" class="hover:underline block px-3 py-2 rounded text-dark-accent md:inline md:p-0">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -105,7 +118,7 @@
             <div class="text-center md:text-left order-1 md:order-2">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4 text-primary">The Flourish Philosophy</h2>
                 <p class="text-lg leading-relaxed text-primary font-light">
-                    At Flourish Design Co., we believe in creating spaces that reflect your unique style and needs. Our collaborative approach ensures a seamless and enjoyable design journey from concept to completion. We focus on blending timeless elegance with personal touches to make every space truly yours.
+                    At Flourish Design Co., we believe you can create spaces that reflect your unique style and needs. Our collaborative approach helps you discover and refine your sense of style throughout the design journey. We focus on blending timeless elegance with personal touches to make every space uniquely yours.
                 </p>
             </div>
         </div>
@@ -181,6 +194,29 @@
                 });
             });
         });
+    </script>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function() {
+            const btn = document.getElementById('menu-toggle');
+            const menu = document.getElementById('main-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
+
+            if (!btn || !menu) return;
+
+            btn.addEventListener('click', () => {
+                const isOpen = menu.classList.toggle('hidden') === false; // true when shown
+                // Update icons
+                if (iconOpen && iconClose) {
+                    iconOpen.classList.toggle('hidden', isOpen);
+                    iconClose.classList.toggle('hidden', !isOpen);
+                }
+                // Update ARIA
+                btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+        })();
     </script>
 </body>
 </html>

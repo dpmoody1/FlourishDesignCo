@@ -1,15 +1,61 @@
+:root {
+    --primary: #3a5127;
+    --secondary: #b3c39e;
+    --accent: #e3a575;
+    --dark-accent: #ba6a31;
+    --light-bg: #f3f0e9;
+}
+
 body {
     font-family: 'Inter', sans-serif;
-    color: #e3a575;
-    background-color: #3a5127;
+    color: var(--primary);
+    background-color: var(--light-bg);
 }
-h1, h2, h3 {
+
+h1, h2, h3, h4 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
 }
-.hero-bg-container {
-    background-image: url('WilliamMorrisCropped.png');
-    background-repeat: no-repeat;
+
+.glass {
+    background: rgba(243, 240, 233, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(179, 195, 158, 0.2);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+
+.morris-accent {
+    background-image: url('WilliamMorrisCroppedHorizontal.png');
     background-size: cover;
     background-position: center;
 }
